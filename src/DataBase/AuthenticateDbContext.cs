@@ -12,6 +12,8 @@ namespace bolao10.api.DataBase
 
         public DbSet<Bolao> Boloes { get; set; }
 
+        public DbSet<Aposta> Apostas { get; set; }
+
         public DbSet<Participante> Participantes { get; set; }
         public AuthenticateDbContext(DbContextOptions<AuthenticateDbContext> options) : base(options)
         {

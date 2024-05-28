@@ -8,6 +8,13 @@ namespace bolao10.api.Services.Impl
     public class ApostaService : IApostaService
     {
 
-   
+        IApostaRepository _apostaRepository;
+        public ApostaService(IApostaRepository apostaRepository) {
+            _apostaRepository = apostaRepository;
+        }
+        public Task<List<Aposta>> GetByParticipante(int id)
+        {
+            return _apostaRepository.GetByParticipante(id);
+        }
     }
 }
