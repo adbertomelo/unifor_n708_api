@@ -14,6 +14,9 @@ namespace bolao10.api.DataBase
 
         public DbSet<Aposta> Apostas { get; set; }
 
+        public DbSet<Fase> Fases { get; set; }
+
+        public DbSet<Rodada> Rodadas { get; set; }
         public DbSet<Participante> Participantes { get; set; }
         public AuthenticateDbContext(DbContextOptions<AuthenticateDbContext> options) : base(options)
         {

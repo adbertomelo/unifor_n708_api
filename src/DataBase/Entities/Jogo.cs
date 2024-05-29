@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using AutoMapper.Configuration.Annotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace bolao10.api.DataBase.Entities
 {
@@ -8,8 +9,10 @@ namespace bolao10.api.DataBase.Entities
 
         public virtual int Id { get; set; }
 
+        [ForeignKey("RODADA_ID")]
         public virtual Rodada Rodada { get; set; }
 
+        [ForeignKey("TIME1_ID")]
         public virtual Time Time1 { get; set; }
 
         public virtual int? Gols1 { get; set; }
@@ -17,6 +20,7 @@ namespace bolao10.api.DataBase.Entities
         [Column("GOLS1_REALTIME")]
         public virtual int? Gols1RealTime { get; set; }
 
+        [ForeignKey("TIME2_ID")]
         public virtual Time Time2 { get; set; }
 
         
@@ -27,6 +31,7 @@ namespace bolao10.api.DataBase.Entities
 
         public virtual DateTime Dia { get; set; }
 
+        [NotMapped]
         public virtual DateTime DiaUTC { get; set; }
 
         public virtual string Local { get; set; }
@@ -40,6 +45,7 @@ namespace bolao10.api.DataBase.Entities
 
         }
 
+        
         public virtual bool Amanha
         {
             get
@@ -49,6 +55,8 @@ namespace bolao10.api.DataBase.Entities
 
         }
 
+
+        [NotMapped]
         public virtual string Codigo { get; set; }
 
         public Jogo()

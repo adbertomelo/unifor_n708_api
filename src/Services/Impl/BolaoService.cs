@@ -1,14 +1,15 @@
 ﻿using bolao10.api.DataBase.Entities;
+using bolao10.api.DataBase.Repositories.Impl;
 using bolao10.api.DataBase.Repositories.Interfaces;
 using bolao10.api.Services.Interfaces;
 
 namespace bolao10.api.Services.Impl
 {
+
     public class BolaoService : IBolaoService
     {
 
         private readonly IBolaoRepository _bolaoRepository;
-
         public BolaoService(
             IBolaoRepository bolaoRepository
         )
@@ -27,9 +28,14 @@ namespace bolao10.api.Services.Impl
 
         }
 
+        public Task<List<Fase>> GetFases(int idBolao)
+        {
+            return _bolaoRepository.GetAllFases();
+        }
 
-
-
-
+        public Task<List<Rodada>> GetRodadas(int idBolao)
+        {
+            return _bolaoRepository.GetAlRodadas();
+        }
     }
 }

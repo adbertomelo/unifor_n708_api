@@ -15,6 +15,20 @@ namespace bolao10.api.DataBase.Repositories.Impl
             _acessoDbContext = acessoDbContext;
         }
 
+        public Task<List<Fase>> GetAllFases()
+        {
+            return _acessoDbContext
+                .Fases.ToListAsync();
+        }
+
+        public Task<List<Rodada>> GetAlRodadas()
+        {
+            return _acessoDbContext
+            .Rodadas
+            .Include(a => a.Fase)
+                .ToListAsync();
+        }
+
         public Task<Bolao?> LocalizarAtivoAsync()
         {
             return _acessoDbContext.Boloes

@@ -1,5 +1,8 @@
-﻿namespace bolao10.api.DataBase.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace bolao10.api.DataBase.Entities
 {
+    [Table("FASES")]
     public class Fase
     {
         public virtual int Id { get; set; }

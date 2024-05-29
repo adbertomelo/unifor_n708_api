@@ -10,6 +10,7 @@ namespace bolao10.api.Controllers
 {
 
     [Authorize]
+    [Route("Apostas")]
     [ApiController]
     public class ApostaController : ControllerBase
     {
@@ -22,9 +23,9 @@ namespace bolao10.api.Controllers
 
         [HttpGet]
         [Route("GetByParticipante")]
-        public IList<Aposta> GetByParticipante(ParticipanteRequest participanteRequest)
+        public Task<List<Aposta>> GetByParticipante(int idParticipante)
         {
-            return _apostaService.GetByParticipante(participanteRequest.Id);
+            return _apostaService.GetByParticipante(idParticipante);
         }
 
 

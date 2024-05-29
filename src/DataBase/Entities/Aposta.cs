@@ -7,7 +7,7 @@ namespace bolao10.api.DataBase.Entities
     public class Aposta
     {
 
-        public virtual int Id { get; set; }
+        public virtual Int64 Id { get; set; }
 
         [ForeignKey("JOGO_ID")]
         public virtual Jogo Jogo { get; set; }
