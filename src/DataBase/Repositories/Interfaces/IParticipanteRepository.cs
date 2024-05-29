@@ -9,5 +9,6 @@ namespace bolao10.api.DataBase.Repositories.Interfaces
 
         void Atualizar(Participante participante);
         Task<Participante?> GetByCodigo(string codigo);
+        Task<List<Participante>> GetAll();
     }
 }

@@ -4,8 +4,9 @@ namespace bolao10.api.DataBase.Repositories.Interfaces
 {
     public interface IBolaoRepository
     {
-        Task<List<Fase>> GetAllFases();
-        Task<List<Rodada>> GetAlRodadas();
+        Task<List<Fase>> GetFases();
+        Task<List<Rodada>> GetRodadas();
+        Task<List<Time>> GetTimes();
 
         //Task<Usuario> LocalizarAcessoAsync(int idUsuario, int idEmpresa);
         Task<Bolao?> LocalizarAtivoAsync();

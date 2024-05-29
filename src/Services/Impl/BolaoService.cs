@@ -30,12 +30,17 @@ namespace bolao10.api.Services.Impl
 
         public Task<List<Fase>> GetFases(int idBolao)
         {
-            return _bolaoRepository.GetAllFases();
+            return _bolaoRepository.GetFases();
         }
 
         public Task<List<Rodada>> GetRodadas(int idBolao)
         {
-            return _bolaoRepository.GetAlRodadas();
+            return _bolaoRepository.GetRodadas();
+        }
+
+        public Task<List<Time>> GetTimes()
+        {
+            return _bolaoRepository.GetTimes();
         }
     }
 }

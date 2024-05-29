@@ -52,6 +52,13 @@ namespace bolao10.api.Services.Impl
 
         }
 
+        public async Task<List<Participante>> GetAll()
+        {
+            var res = await _participanteRepository.GetAll();
+
+            return res;
+
+        }
 
     }
 }

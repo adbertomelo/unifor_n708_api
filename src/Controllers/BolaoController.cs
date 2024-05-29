@@ -52,6 +52,13 @@ namespace bolao10.api.Controllers
         }
 
         [HttpGet]
+        [Route("Times")]
+        public Task<List<Time>> Times()
+        {
+            return _bolaoService.GetTimes();
+        }
+
+        [HttpGet]
         [Route("GetRodadaCorrente")]
         public Task<List<Rodada>> GetRodadaCorrente(int idBolao)
         {

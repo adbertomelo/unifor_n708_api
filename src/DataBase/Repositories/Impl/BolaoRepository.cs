@@ -15,13 +15,13 @@ namespace bolao10.api.DataBase.Repositories.Impl
             _acessoDbContext = acessoDbContext;
         }
 
-        public Task<List<Fase>> GetAllFases()
+        public Task<List<Fase>> GetFases()
         {
             return _acessoDbContext
                 .Fases.ToListAsync();
         }
 
-        public Task<List<Rodada>> GetAlRodadas()
+        public Task<List<Rodada>> GetRodadas()
         {
             return _acessoDbContext
             .Rodadas
@@ -29,6 +29,12 @@ namespace bolao10.api.DataBase.Repositories.Impl
                 .ToListAsync();
         }
 
+        public Task<List<Time>> GetTimes()
+        {
+            return _acessoDbContext
+            .Times
+                .ToListAsync();
+        }
         public Task<Bolao?> LocalizarAtivoAsync()
         {
             return _acessoDbContext.Boloes

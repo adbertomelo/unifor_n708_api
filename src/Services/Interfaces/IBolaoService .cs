@@ -9,6 +9,7 @@ namespace bolao10.api.Services.Interfaces
             Task<Bolao> GetAtivoAsync();
             Task<List<Fase>> GetFases(int idBolao);
             Task<List<Rodada>> GetRodadas(int idBolao);
-        }
+        Task<List<Time>> GetTimes();
+    }
     
 }

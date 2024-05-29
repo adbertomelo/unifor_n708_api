@@ -51,6 +51,22 @@ namespace bolao10.api.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetAll")]
+        public async Task<ActionResult<List<Participante>>> GetAll()
+        {
+            try
+            {
+                var retorno = await _participanteService.GetAll();
+
+                return Ok(retorno);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPut]
         [Route("AtualizarInformacoesAcesso")]
         public IActionResult AtualizarInformacoesAcesso([FromBody]ParticipanteRequest participanteRequest)
