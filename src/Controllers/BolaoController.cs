@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace bolao10.api.Controllers
 {
-    [ApiController]
-    [Route("Boloes")]
     [Authorize]
+    [ApiController]
+    [Route("Boloes")]    
     public class BolaoController: ControllerBase
     {
 
@@ -58,6 +58,12 @@ namespace bolao10.api.Controllers
             return _bolaoService.GetTimes();
         }
 
+        [HttpGet]
+        [Route("Parametros")]
+        public Task<Parametros> Parametros(int idBolao)
+        {
+            return _bolaoService.GetParametros(idBolao);
+        }
         [HttpGet]
         [Route("GetRodadaCorrente")]
         public Task<List<Rodada>> GetRodadaCorrente(int idBolao)

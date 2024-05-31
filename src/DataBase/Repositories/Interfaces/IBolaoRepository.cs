@@ -5,6 +5,7 @@ namespace bolao10.api.DataBase.Repositories.Interfaces
     public interface IBolaoRepository
     {
         Task<List<Fase>> GetFases();
+        Task<Parametros> GetParametros(int idBolao);
         Task<List<Rodada>> GetRodadas();
         Task<List<Time>> GetTimes();
 

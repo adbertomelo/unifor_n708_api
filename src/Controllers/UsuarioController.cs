@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace bolao10.api.Controllers
 {
+    
+    [Authorize]
     [ApiController]
     [Route("Usuario")]
-    [Authorize]
     public class UsuarioController: ControllerBase
     {
 

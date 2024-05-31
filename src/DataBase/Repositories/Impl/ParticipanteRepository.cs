@@ -35,11 +35,7 @@ namespace bolao10.api.DataBase.Repositories.Impl
         {
             return _acessoDbContext.Participantes
                 .AsNoTracking()
-                .Include(c => c.Usuario)
-                .Include(d => d.Usuario.Cidade)
-                .Include(e => e.Usuario.Cidade.Estado)
-                .Include(f => f.Usuario.Cidade.Estado.Pais)
-                .Include(g => g.Bolao).ToListAsync();
+                .ToListAsync();
         }
 
         public Task<Participante?> GetByCodigo(string codigo)

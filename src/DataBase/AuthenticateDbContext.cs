@@ -21,6 +21,8 @@ namespace bolao10.api.DataBase
 
         public DbSet<Time> Times { get; set; }
 
+        public DbSet<Parametros> Parametros { get; set; }
+
         public AuthenticateDbContext(DbContextOptions<AuthenticateDbContext> options) : base(options)
         {
 

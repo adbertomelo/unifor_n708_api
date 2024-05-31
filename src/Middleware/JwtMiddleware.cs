@@ -15,7 +15,7 @@ namespace bolao10.api.Middleware
 
         public async Task Invoke(
             HttpContext context,
-            AuthenticateDbContext acessoDbContext,
+            //AuthenticateDbContext acessoDbContext,
             TokenValidationParameters tokenValidationParameters
         )
         {
@@ -33,9 +33,9 @@ namespace bolao10.api.Middleware
                     var jwtToken = (JwtSecurityToken)validatedToken;
              
                 }
-                catch (Exception)
+                catch
                 {
-
+                    throw;
                 }
             }
 

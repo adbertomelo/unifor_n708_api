@@ -6,8 +6,8 @@ namespace bolao10.api.Services.Interfaces
     {
         
         void AtualizarInformacoesAcesso(int idParticipante);
-        Task GetAll();
         Task<Participante> GetByCodigo(string codigo);
         Task<Participante> GetByUsuarioBolao(int idUsuario, int idBolao);
+        Task<List<Participante>> GetAll();
     }
 }

@@ -21,6 +21,13 @@ namespace bolao10.api.DataBase.Repositories.Impl
                 .Fases.ToListAsync();
         }
 
+        public Task<Parametros> GetParametros(int idBolao)
+        {
+            return _acessoDbContext.Parametros.AsNoTracking()
+                        .SingleOrDefaultAsync();
+
+        }
+
         public Task<List<Rodada>> GetRodadas()
         {
             return _acessoDbContext

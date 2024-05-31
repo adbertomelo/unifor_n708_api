@@ -42,5 +42,12 @@ namespace bolao10.api.Services.Impl
         {
             return _bolaoRepository.GetTimes();
         }
+
+        public Task<Parametros> GetParametros(int idBolao)
+        {
+            return _bolaoRepository.GetParametros(idBolao);
+        }
+
+
     }
 }
